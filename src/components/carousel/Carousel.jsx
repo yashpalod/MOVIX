@@ -11,6 +11,7 @@ import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import ContentWrapper from "../contentWrapper/ContenWrapper";
 import "./style.scss";
+import CircleRating from "../circleRating/CircleRating";
 
 const Carousel = ({ data, loading }) => {
     const carouselContainer = useRef();
@@ -53,6 +54,7 @@ const Carousel = ({ data, loading }) => {
                                 <div key={item.id} className="carouselItem">
                                     <div className="posterBlock">
                                         <Img src={posterUrl} />
+                                        <CircleRating rating={item.vote_average.toFixed(1)} />
                                     </div>
                                     <div className="textBlock">
                                         <span className="title">{item.title || item.name}</span>
