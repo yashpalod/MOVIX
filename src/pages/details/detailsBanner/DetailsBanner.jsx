@@ -91,10 +91,10 @@ const DetailsBanner = ({ video, crew }) => {
 
                                         <div className="row">
                                             {/* {console.log(data.vote_average.toFixed(1))} */}
-                                            <CircleRating rating={data.vote_average.toFixed(1)} />
+                                            <CircleRating rating={data.vote_average?.toFixed(1)} />
                                             <div className="playbtn" onClick={() => {
                                                 setShow(true)
-                                                setVideoId(video.key)
+                                                setVideoId(video?.key)
                                             }}>
                                                 <PlayIcon />
                                                 <span className="text">
@@ -113,36 +113,36 @@ const DetailsBanner = ({ video, crew }) => {
                                         </div>
 
                                         <div className="info">
-                                            {data.status && (
+                                            {data?.status && (
                                                 <div className="infoItem">
                                                     <span className="text bold">
                                                         Status:{" "}
                                                     </span>
                                                     <span className="text">
-                                                        {data.status}
+                                                        {data?.status}
                                                     </span>
                                                 </div>
                                             )}
-                                            {data.release_date && (
+                                            {data?.release_date && (
                                                 <div className="infoItem">
                                                     <span className="text bold">
                                                         Release Date:{" "}
                                                     </span>
                                                     <span className="text">
                                                         {
-                                                            dayjs(data.release_date).format("MMM D, YYYY")
+                                                            dayjs(data?.release_date).format("MMM D, YYYY")
                                                         }
                                                     </span>
                                                 </div>
                                             )}
-                                            {data.runtime && (
+                                            {data?.runtime && (
                                                 <div className="infoItem">
                                                     <span className="text bold">
                                                         Runtime:{" "}
                                                     </span>
                                                     <span className="text">
                                                         {
-                                                            toHoursAndMinutes(data.runtime)
+                                                            toHoursAndMinutes(data?.runtime)
                                                         }
                                                     </span>
                                                 </div>
