@@ -22,7 +22,7 @@ const Popular = () => {
             <Carousel
                 data={data?.results}
                 loading={loading}
-                endPoint={endPoint}
+                endpoint={endPoint}
             />            {/*? optional chaining */}
         </div>
     )

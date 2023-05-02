@@ -25,7 +25,7 @@ const Header = () => {
 
     // code for showing or hiding navbar
     const controlNavbar = () => {
-        console.log(window.scrollY);
+        //console.log(window.scrollY);
         if (window.scrollY > 200) {
             if (window.scrollY > lastScrollY && !mobileMenu) {
                 setShow("hide")
